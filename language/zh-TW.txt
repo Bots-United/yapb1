@@ -1,0 +1,492 @@
+﻿
+All lines before the first [ORIGINAL] are comments.
+
+If you want to use this translation, please copy this file
+to cstrike\addons\yapb directory, and rename it to lang.txt.
+
+If you want to create a new translation based on this file,
+please edit only the [TRANSLATED] sections. Do NOT change
+anything to the [ORIGINAL] sections! Otherwise the messages
+won't be translated correctly.
+
+Also please save this file using the UTF-8 encoding.
+
+--------------------------------------------------------------
+
+
+[ORIGINAL]
+\yBot Options\w
+
+1. Quick add bot
+2. Add specific bot
+3. Kill all bots
+4. Kill all players
+5. Fill server with bots
+6. Kick random bot
+7. Remove all bots
+8. Select weapon mode
+
+0. Exit
+
+[TRANSLATED]
+\yBot 選項\w
+
+1. 快速添加 bot
+2. 添加特定的 bot
+3. 殺死所有的 bot
+4. 殺死所有的玩家
+5. 將伺服器添滿 bot
+6. 隨機刪除一個 bot
+7. 刪除所有 bot
+8. 選擇武器模式
+
+0. 退出
+
+[ORIGINAL]
+\yBot Weapon Mode\w
+
+1. Knives only
+2. Pistols only
+3. Shotguns only
+4. Machine Guns only
+5. Rifles only
+6. Sniper Weapons only
+7. All Weapons (Standard)
+
+0. Exit
+
+[TRANSLATED]
+\yBot 武器模式\w
+
+1. 只用匕首
+2. 只用手槍
+3. 只用霰彈槍
+4. 只用機槍
+5. 只用步槍
+6. 只用狙擊槍
+7. 所有武器 (標準模式)
+
+0. 取消
+
+[ORIGINAL]
+\yBot Personality\w
+
+1. Random
+2. Normal
+3. Aggressive
+4. Defensive
+
+0. Exit
+
+[TRANSLATED]
+\yBot 個性\w
+
+1. 隨機
+2. 正常
+3. 進攻型
+4. 防守型
+
+0. 取消
+
+[ORIGINAL]
+\yBot Skill Level\w
+
+1. Stupid (0-20)
+2. Newbie (20-40)
+3. Average (40-60)
+4. Advanced (60-80)
+5. Professional (80-99)
+6. Godlike (100)
+
+0. Exit
+
+[TRANSLATED]
+\yBot 難度\w
+
+1. 新手 (0-20)
+2. 初級 (20-40)
+3. 中級 (40-60)
+4. 高級 (60-80)
+5. 專業水準 (80-99)
+6. 作弊者 (100)
+
+0. 取消
+
+[ORIGINAL]
+\ySelect a team\w
+
+1. Terrorist Force
+2. Counter-Terrorist Force
+
+5. Auto-select
+
+0. Exit
+
+[TRANSLATED]
+\y選擇隊伍\w
+
+1. 恐怖分子
+2. 反恐精英
+
+5. 自動選擇
+
+0. 取消
+
+[ORIGINAL]
+\ySelect an appearance\w
+
+1. Phoenix Connexion
+2. L337 Krew
+3. Arctic Avengers
+4. Guerilla Warfare
+
+5. Auto-select
+
+0. Exit
+
+[TRANSLATED]
+\y選擇一個外觀\w
+
+1. Phoenix Connexion
+2. L337 Krew
+3. Arctic Avengers
+4. Guerilla Warfare
+
+5. 自動選擇
+
+0. 取消
+
+[ORIGINAL]
+\ySelect an appearance\w
+
+1. Seal Team 6 (DEVGRU)
+2. German GSG-9
+3. UK SAS
+4. French GIGN
+
+5. Auto-select
+
+0. Exit
+
+[TRANSLATED]
+\y選擇一個外觀\w
+
+1. Seal Team 6 (DEVGRU)
+2. German GSG-9
+3. UK SAS
+4. French GIGN
+
+5. 自動選擇
+
+0. 退出
+
+[ORIGINAL]
+\yWaypoint Operations (Page 1)\w
+
+1. Show/Hide waypoints
+2. Create path begin
+3. Create path end
+4. Remove path begin
+5. Remove path end
+6. Add waypoint
+7. Delete waypoint
+8. Set Radius
+
+9. Next...
+
+0. Exit
+
+[TRANSLATED]
+\y路點操作 (第一頁)\w
+
+1. 顯示/隱藏路點
+2. 建立路徑 (起始點)
+3. 建立路徑 (結束點)
+4. 刪除路徑 (起始點)
+5. 刪除路徑 (結束點)
+6. 添加路點
+7. 刪除路點
+8. 設置路點作用範圍
+
+9. 下一頁...
+
+0. 取消
+
+[ORIGINAL]
+\yWaypoint Operations (Page 2)\w
+
+1. Waypoint stats
+2. Autowaypoint on/off
+3. Set flags
+4. Save waypoints
+5. Save without checking
+6. Load waypoints
+7. Check waypoints
+8. Noclip cheat on/off
+
+9. Previous...
+
+0. Exit
+
+[TRANSLATED]
+\y路點操作 (第二頁)\w
+
+1. 路點統計
+2. 自動添加路點 (開/關)
+3. 設置路點屬性
+4. 保存路點
+5. 不檢查保存路點
+6. 讀取路點
+7. 檢查路點
+8. 穿牆模式 (開/關)
+
+9. 上一頁...
+
+0. 取消
+
+[ORIGINAL]
+\yWaypoint Radius\w
+
+1. 0
+2. 8
+3. 16
+4. 32
+5. 48
+6. 64
+7. 80
+8. 96
+9. 128
+
+0. Exit
+
+[TRANSLATED]
+\y路點作用範圍\w
+
+1. 0
+2. 8
+3. 16
+4. 32
+5. 48
+6. 64
+7. 80
+8. 96
+9. 128
+
+0. 退出
+
+[ORIGINAL]
+\yWaypoint Type\w
+
+1. Normal
+\r2. Terrorist Important
+3. Counter-Terrorist Important
+\w4. Block with hostage
+\y5. Rescue Zone
+\w6. Camping
+7. Camp End
+\r8. Map Goal
+\w9. Jump
+
+\w0. Exit
+
+[TRANSLATED]
+\y路點類型\w
+
+1. 正常
+\r2. 恐怖分子重要點
+3. 反恐精英重要點
+\w4. 人質無法通過點
+\y5. 人質解救點
+\w6. 守衛點
+7. 守衛點結束角度
+\r8. 地圖目標
+\w9. 跳躍路點
+
+\w0. 取消
+
+[ORIGINAL]
+\yWaypoint Flags\w
+
+\yAdd waypoint flag:\w
+
+1. Block with Hostage
+2. Terrorists Specific
+3. CTs Specific
+4. Use Elevator
+
+\yDelete waypoint flag:\w
+
+5. Block with Hostage
+6. Terrorists Specific
+7. CTs Specific
+8. Use Elevator
+
+0. Exit
+
+[TRANSLATED]
+\y路點屬性\w
+
+\y添加路點屬性:\w
+
+1. 人質無法通過
+2. 恐怖分子
+3. 反恐精英
+4. 電梯
+
+\y刪除路點屬性:\w
+
+5. 人質無法通過
+6. 恐怖分子
+7. 反恐精英
+8. 電梯
+
+0. 退出
+
+[ORIGINAL]
+No Waypoints for this Map!
+
+[TRANSLATED]
+沒有這個地圖的路點檔!
+
+[ORIGINAL]
+Valid weapon mode is from 1 to 7
+
+[TRANSLATED]
+合法的武器模式只能是從 1 到 7
+
+[ORIGINAL]
+Waypoint made by: %s
+
+[TRANSLATED]
+路點作者: %s
+
+[ORIGINAL]
+WARNING: No waypoint file is found. You can't add bots
+
+[TRANSLATED]
+警告: 沒有找到路點檔。您不能添加 bot
+
+[ORIGINAL]
+Waypoint cleared
+
+[TRANSLATED]
+全部路點已清除
+
+[ORIGINAL]
+Waypoint Editing is ON
+
+[TRANSLATED]
+路點編輯器已打開
+
+[ORIGINAL]
+Waypoint Editing turned OFF
+
+[TRANSLATED]
+路點編輯器已關閉
+
+[ORIGINAL]
+Waypoints are ON
+
+[TRANSLATED]
+路點編輯器已打開
+
+[ORIGINAL]
+Waypoints are OFF
+
+[TRANSLATED]
+路點編輯器已關閉
+
+[ORIGINAL]
+Noclip Cheat is ON
+
+[TRANSLATED]
+穿牆模式已打開
+
+[ORIGINAL]
+Noclip Cheat is OFF
+
+[TRANSLATED]
+穿牆模式已關閉
+
+[ORIGINAL]
+Showing Direction to Waypoint
+
+[TRANSLATED]
+顯示路點方向
+
+[ORIGINAL]
+Waypoints loaded
+
+[TRANSLATED]
+路點已讀出
+
+[ORIGINAL]
+Waypoints saved
+
+[TRANSLATED]
+路點已保存
+
+[ORIGINAL]
+All Nodes work fine!
+
+[TRANSLATED]
+所有路點都沒有問題!
+
+[ORIGINAL]
+Waypoint Nr. %d now cached
+
+[TRANSLATED]
+%d 號路點已緩存
+
+[ORIGINAL]
+Auto-Waypoint is ON
+
+[TRANSLATED]
+自動添加路點已打開
+
+[ORIGINAL]
+Auto-Waypoint is OFF
+
+[TRANSLATED]
+自動添加路點已關閉
+
+[ORIGINAL]
+Experience saved
+
+[TRANSLATED]
+經驗收集已保存
+
+[ORIGINAL]
+Experience is ON
+
+[TRANSLATED]
+經驗收集已打開
+
+[ORIGINAL]
+Experience is OFF
+
+[TRANSLATED]
+經驗收集已關閉
+
+[ORIGINAL]
+Waypoint not saved
+
+There are errors, see console
+
+[TRANSLATED]
+路點沒有保存!
+
+路點有錯誤, 請詳見控制臺
+
+[ORIGINAL]
+There are errors, see console
+
+[TRANSLATED]
+路點有錯誤, 請詳見控制臺
+
+[ORIGINAL]
+WARNING! Jump path not saved from %d to %d\n
+
+[TRANSLATED]
+警告! 從 %d 到 %d 的跳躍連接沒有被保存
+

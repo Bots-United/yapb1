@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>YaPB</title>
+</head>
+<body style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);"
+ link="#00ff00" vlink="#00ff00">
+<div style="text-align: center;"><a href="http://yapb.bots-united.com"><img
+ alt="YaPB" title="YaPB" src="images/antonyyapb.jpg"
+ style="border: 0px solid ; width: 508px; height: 210px; font-family: Helvetica,Arial,sans-serif;"></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+</div>
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<div style="text-align: center;"><font
+ style="color: rgb(255, 255, 255);" size="-1"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic; text-decoration: underline;">[
+Parts of this file are taken from the original POD-Bot 2.5 readme file ]</span></font><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+</div>
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">This
+program is
+based on Count Floyd's POD-Bot 2.6 source code
+(<a href="http://podbot.nuclearbox.com">http://podbot.nuclearbox.com</a>).
+Don't forget about this, because most
+of the work was done by him.</span>
+<hr style="width: 100%; height: 2px;"><span
+ style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;"><a name="TOC" href="#TOC">TABLE OF CONTENTS</a><br>
+<br>
+</span><a href="#SEC1">Installation</a><br>
+<a href="#SEC2">Requirement</a><br>
+<a href="#SEC3">How to start a Game with Bots</a><br>
+<a href="#SEC4">Step by Step Installation</a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<a href="#SEC5">Running YaPB on dedicated servers</a></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><a href="#SEC6">
+Playing with the Bots</a><br>
+<a href="#SEC7">Ordering
+Bots through Radio Commands</a><br>
+<a href="#SEC8">Summary
+of Bot Reactions to Radio Commands</a><br>
+<a href="#SEC9">Bot Skill
+differences</a><br>
+<a href="#SEC10">Bot
+Personalities</a><br>
+<a href="#SEC11">Summary
+of Console Commands</a><br>
+</span>
+<hr style="width: 100%; height: 2px;"><span
+ style="font-family: Helvetica,Arial,sans-serif;"></span><a name="SEC1"
+ href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">INSTALLATION</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Installation
+is
+very simple. Just unzip the downloaded zip file to your
+main HL/CS directory:</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">C:\Sierra\Half-Life
+(MOD version)</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">C:\Sierra\Counter-Strike
+(Counter-Strike Retail)</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">C:\Program
+Files\Steam\SteamApps\&lt;account name&gt;\Counter-Strike
+(Steam Counter-Strike 1.6)</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">C:\Program
+Files\Steam\SteamApps\&lt;account name&gt;\dedicated server
+(Steam Dedicated Server)</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">If
+you are using
+CS 1.6, you also need to copy all the waypoint files
+in cstrike\addons\yapb\wptcs16 to cstrike\addons\yapb\wptdefault.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">This
+bot should
+also work on Steam which have CS 1.3 installed, just
+copy all the files in cstrike folder to your CS 1.3 folder; but that's
+not tested.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Note:
+The YaPB
+bot DLL is self-adaptable and can be used as both normal
+bot DLL and metamod plugin. If you have metamod installed, it's
+recommended to use this bot as a metamod plugin instead of a normal bot
+DLL.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC2" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">REQUIREMENT</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">The
+Bot
+currently only works in Counter-Strike 1.1 - 1.6. If you
+haven't updated your CS version to 1.1 (or higher) you will HAVE to do
+so before using it.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC3" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">HOW
+TO START A GAME WITH BOTS</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Create
+a Game
+with a map that has waypoints for POD-Bot (take a look
+into the "cstrike\addons\yapb\wptdefault" folder - all files with the
+extension ".pwf" should be valid waypoint files. You can manually add
+bots using the console. To use the console you have to turn it on.
+Here's my shortcut properties for Counter-Strike:</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">D:\Sierra\Half-Life\hl.exe
+-console -game cstrike</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">This
+will
+activate Counter-Strike automatically and turn on the in-game
+console. If a map has loaded, press the key below "Esc" and it will
+scroll down. Just type "<span style="font-style: italic;">yapb add</span>"
+and a new bot will be connected...</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">There
+are
+comments in the podbot.cfg file to show you how to change
+parameters. If the Bots are stuck or you just want to start a new round
+type in "<span style="font-style: italic;">yapb killbots</span>" which
+will force all bots to be dead instantly.
+If you're sick of playing with Bots type "<span
+ style="font-style: italic;">yapb removebots</span>" which will
+kick all Bots from the Server.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">To
+manually
+change maps, type "map mapname" to load a new map. So for
+example to load "DE_DUST" you type "<span style="font-style: italic;">map
+DE_DUST</span>". Existing Bots will
+join the Game if the map is loaded.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">A
+helpful User
+Menu is available for performing the most used actions.
+It's binded by default (you can change it in podbot.cfg) to the "="
+key. If you're pressing the "=" key a Menu with the following options
+should appear on your Screen:</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">1.
+Quick Add Bot</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">This
+does what
+it says. It quickly adds a Bot giving him a random name,
+team, skill and model. Skill will be chosen randomly between your
+yapb_minskill/yapb_maxskill values.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">2.
+Add specific Bot</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Allows
+you
+specify all things for adding Bots.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">3.
+Kill all Bots</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Kills
+all Bots
+in all Teams. Use this to end Rounds faster, if you
+don't like watching the Bots play.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">4.
+Kill all Players</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Same
+as above,
+but also kills human players.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">5.
+Fill Server with Bots</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Fills
+all free
+Server Entries with Bots. After selecting this option
+you can specify the team or to auto-assign them. If you select a team
+the server variables "mp_autoteambalance" and "mp_limitteams" will be
+set to 0 and all Bots will only join 1 Team. You can use this to play
+alone against all Bots.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">6.
+Kick Random Bot</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Kicks
+the first
+Bot in the List.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">7.
+Remove all Bots</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Kicks
+all Bots
+of the Server.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">8.
+Select Weapon Mode</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Opens
+another
+Sub-Menu where you can select the Weapons Bots will buy
+(and use in combat). Selecting Knife Mode will also turn on Jason-Mode.
+Selecting Standard Weapons will turn it off again.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC4" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">STEP
+BY STEP INSTALLATION (if you still don't have a clue!)</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">1)</span> Make sure
+Half-Life is installed and Counter-Strike is working
+well...</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">2)</span> To be able to
+activate the Console in the Game you need to modify
+your Shortcut properties. Open the shortcut properties and add the
+following parameters: -game cstrike -console</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">&nbsp;&nbsp;
+My
+own looks like this:</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">&nbsp;&nbsp;
+"D:\Sierra\Half-Life\hl.exe -game cstrike -console"</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">3)</span> Install the
+bot into the Half-Life Folder.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">4)</span> Start
+Half-Life using the Shortcut you modified in Step 2</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">5)</span> Click on
+"Play CS"</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">6)</span> Click on
+"LAN-Game"</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">7)</span> Now you need
+to select a map for which you already got waypoint
+files. All ".pwf" Files in wptdefault folder are valid waypoint files.
+We take for example de_dust. Click on "de_dust" in the selection panel
+on the right side. Then click on "Create Game".</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">8)</span> Click on "OK"
+if you don't want to modify settings, such as
+roundtime etc.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">9)</span> Voila! Cs is
+loading and soon the game should appear right before
+your eyes.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">10)</span> If you want
+to add bots yourself, open the Console. This is done by
+using the "~" key. On my keyboard it's the key located under the "Esc"
+key. Type "yapb add" and if your Server isn't already full, a new bot
+will join. You can also use the pretty User Menu by pressing the "="
+Key.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">11)</span> Have Fun
+playing for hours without any Internet Costs !</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC5" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">RUNNING
+YaPB ON DEDICATED SERVERS</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Install
+YaPB as
+described above for dedicated servers and start the
+game the way you normally would.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">When
+running a
+dedicated server most of the YaPB commands that are
+normally available from the client console screen are still available.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">When
+using the
+dedicated server, bot will also be automatically spawned
+using the podbot.cfg file. You can also use the yapb_quota settings or
+the addbot command explained in this file.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC6" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">PLAYING
+WITH THE BOTS</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">The
+Bots will
+automatically know the goals of the map. CTs might go for
+hostages, Terrorists may want to plant the bomb. VIP Bots will try to
+reach the Rescue Points. The goal selection is done dynamically and
+will be affected by several factors like Personality, Health,
+Team-mates near &amp; Items the Bot is carrying. The Bots will also try
+to support team-mates and take cover when they think it's needed.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC7" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">ORDERING
+BOTS THROUGH RADIO COMMANDS</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">You
+can use some
+of the Radio Commands to get more support from your
+Bots. The first is "Follow Me" which commands Bots in the near to
+follow you. You can specify the maximum of following Bots in the
+podbot.cfg File (defaults to 3).</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">If
+a Bot is
+following you, you can use "Hold this Position" to make a
+pause at that Place and look around for enemies. You can use
+"Go,go,go!" to stop him from following you again. Note that they won't
+follow you in 3 cases:</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">-
+They don't
+want to ! The Bots have their own will and they issue a
+"Negative" if they don't want to follow you.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">-
+They don't see
+you.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">-
+They see an
+enemy and engage the target.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">A
+Terrorist Bot
+carrying the C4 or picking it up, will also issue a
+"Follow Me" sometimes to have some assistance with him. Note that they
+have problems following on ladders at the moment because the movement
+is unwaypointed.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">They
+also do
+some other Radio Commands like "Need Backup", "Enemy
+down", "Enemy spotted", "I'm in Position" (to tell you he's camping)
+but not very often, otherwise it would surely get on your nerves...</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC8" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">SUMMARY
+OF BOT REACTIONS OT RADIO COMMANDS</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Follow me</span> -
+Forces Bots in the near to follow you</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Hold this
+Position</span> - Makes a Bot who's following you, stay awhile at
+that position</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Taking Fire,
+need assistance</span> - Makes all living Bots (not engaged in a
+Fight) run to your position to assist you.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Need Backup</span> -
+Basically the same as above, but limited to distance and
+also the Bots use it sometimes to get some support.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Storm the Front!</span>
+- Mighty command! Forces all Bots in the near to rush
+in the direction you're pointing to when using that command. Basically
+their level of agression is increased so a pathetic frightened Bot
+could also turn around and flee.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Get in
+position...</span> - Bots in the near will try to take a covered
+position and stay there until they either encounter an enemy, you order
+them to leave, or they waited too long.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Go,go,go</span> - If a
+Bot follows you, this commands stops him from
+following. If there are other Bots in the near, they will stop camping
+and going to roam the map again (normally used in combination with "Get
+in position...")</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">Team, Fall Back!</span>
+- Opposite of "<span style="font-style: italic;">Storm the Front</span>".
+Increases Fear and
+decreases agression of Bots in the near so that they are more likely to
+fall back and stay covered for a short period.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC9" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">BOT
+SKILL DIFFERENCES</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">First,
+Bots with
+low skills will pause/camp longer and more often. Bots
+with low skills have a bigger surprise time and they shoot slower. Bots
+with low skill are lucky if they hit something. Then there are minor
+behaviour differences. For example Bots with a skill above 80 use the
+knife more often if you're near them. If you want to get headshots all
+the time (and really fast) add some Bots with a skill of 100.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">You
+can easily
+change a lot of skill parameters by editing the file
+'botskill.cfg' with any text-editor. Also take a look into 'podbot.cfg'
+to adjust some more things to your liking... </span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC10" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">BOT
+PERSONALITIES</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">There
+are 3
+different Personalities in POD now, if you have detailnames
+turned on they can are shown through the Prefixes like this:</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">[P*D]</span> - Agressive</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">[POD]</span> - Normal</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><span
+ style="font-weight: bold;">[P0D]</span> - Defensive</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC11" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">SUMMARY
+OF CONSOLE COMMANDS</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">IMPORTANT:
+I
+have changed all the console commands to make them much
+more unique (so that you can use it with other bots without problems,
+especially other POD's like <a href="http://podbot.nuclearbox.com">POD-Bot
+2.5</a>, POXBot, <a href="http://epodbot.bots-united.com">E[POD]bot</a>,
+<a href="http://ivpbot.bots-united.com">IvPBot</a> or
+<a href="http://podbotmm.bots-united.com">POD-Bot mm</a>). So make sure
+you have read this before complaining about
+"Unknown command: addbot" :)</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">All
+commands in
+square [] brackets are optional and don't need to be
+specified. Most of these commands will also work in podbot.cfg. You'll
+also get a handy User Menu by pressing the "=" key.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb
+about</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Displays
+the
+version information of this bot and the author of the
+waypoints.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb
+add [skill] [personality] [team] [name] [model]</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Adds
+a new Bot
+with skill (0-100), personality (0 = Normal, 1 =
+Aggressive, 2 = Defensive, Others = Random) and model (1-4 or use 5 to
+auto-assign) to team (0-1 or use 5 to auto-assign) with the specified
+name. If you don't use the name argument it will be filled randomly
+from "addons\yapb\botnames.txt". You can edit this file to use other
+names !</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">You
+can skip
+parameters in "yapb add" command using "*". Example: "yapb
+add * * * bot *" will add a bot named "bot" with random skill,
+personality, team and model.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb
+fill</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Fill
+the server
+with bots.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb
+killbots</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Does
+what it
+says.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb
+removebots</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Kicks
+all Bots
+off the Server. Note that this also changes the
+yapb_quota to 0.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb_minskill</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Sets
+the minimum
+Botskill to use when adding Bots. Standard for this is
+0, so a new Bot can have a Skill ranging from 0-100. You can set this
+in "bot.cfg" or manually to avoid specifying a skill everytime you add
+a Bot.</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb_maxskill</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Same
+as above
+except specifies the maximum skill when adding bots.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb_botchat
+1|0</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Turns
+chatting
+Bots on or off</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb_jasonmode
+1|0</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Turns
+on/off
+"JasonMode". In this Mode, Bots are only allowed to use a
+Knife and they won't buy any weapons at all. Use this for example in
+cs_estate or cs_office to have a scary blood-feast ! This is a Fun Mode
+and not to be taken serious ! Kids, don't try this at home :)</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb_wptfolder</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Specifies
+the
+Folder for loading waypoints. No special chars like
+Spaces or quotation marks are allowed. Also note that the Folder must
+be inside the addons\yapb Directory...</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span
+ style="font-family: Helvetica,Arial,sans-serif; font-style: italic;">yapb
+botsvotemap x</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Orders
+all dead
+Bots to vote for Map x, where x is a valid number of a
+map in your mapcycle.</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">There
+are some
+other commands which are only used in
+"addons\yapb\podbot.cfg". Please have a look there, too !</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">There
+are a lot
+of other console commands only used for waypointing.
+These are explained in a separate File called "WaypointsHowToDo.txt"</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<hr style="width: 100%; height: 2px;"><a name="SEC12" href="#TOC"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">THANKS
+(in no specific order):</span></a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;"><br>
+botman&nbsp; &lt;<a href="http://www.planethalflife.com/botman">http://www.planethalflife.com/botman</a>&gt;
+- original author of <a href="http://www.planethalflife.com/botman">HPB
+bot</a>, </span><span style="font-family: Helvetica,Arial,sans-serif;">upon
+</span><span style="font-family: Helvetica,Arial,sans-serif;">which
+all CS bots are built</span><span
+ style="font-family: Helvetica,Arial,sans-serif;"></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Count
+Floyd &lt;<a href="http://podbot.nuclearbox.com">http://podbot.nuclearbox.com</a>&gt;
+- original author of <a href="http://podbot.nuclearbox.com">POD-Bot</a></span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Terran
+- for some suggestions</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">CoCoNUT&nbsp;
+&lt;<a href="http://coconut.de.tc/">http://coconut.de.tc</a>&gt; - for
+many good waypoints and the German translation<br>
+MarD &lt;<a href="http://www.freewebs.com/mard_lltd">http://www.freewebs.com/mard_lltd</a>&gt;
+- for some good waypoints originally shipped with <a
+ href="http://epodbot.bots-united.com">E[POD]bot</a><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+</span><span style="font-family: Helvetica,Arial,sans-serif;"></span><span
+ style="font-family: Helvetica,Arial,sans-serif;">Pierre-Marie
+Baty &lt;<a href="http://racc.bots-united.com">http://racc.bots-united.com</a>&gt;
+- for some fixes and code</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">Antony
+&lt;<a href="http://antony.goodonet.com">http://antony.goodonet.com</a>&gt;
+- for the logo</span><span
+ style="font-family: Helvetica,Arial,sans-serif;"> and some suggestions
+</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">sPlOrYgOn
+&lt;<a href="http://podbotmm.bots-united.com">http://podbotmm.bots-united.com</a>&gt;
+- for some fixes and code</span><br
+ style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">YOU!
+:)</span><br style="font-family: Helvetica,Arial,sans-serif;">
+<span style="font-family: Helvetica,Arial,sans-serif;">...and
+everyone
+else I missed in this list</span>
+<hr style="width: 100%; height: 2px;"><span
+ style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">HAVE
+FUN PLAYING !<br>
+<br>
+</span>
+</body>
+</html>

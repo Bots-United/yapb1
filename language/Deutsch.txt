@@ -1,0 +1,492 @@
+﻿
+All lines before the first [ORIGINAL] are comments.
+
+If you want to use this translation, please copy this file
+to cstrike\addons\yapb directory, and rename it to lang.txt.
+
+If you want to create a new translation based on this file,
+please edit only the [TRANSLATED] sections. Do NOT change
+anything to the [ORIGINAL] sections! Otherwise the messages
+won't be translated correctly.
+
+Also please save this file using the UTF-8 encoding.
+
+--------------------------------------------------------------
+
+
+[ORIGINAL]
+\yBot Options\w
+
+1. Quick add bot
+2. Add specific bot
+3. Kill all bots
+4. Kill all players
+5. Fill server with bots
+6. Kick random bot
+7. Remove all bots
+8. Select weapon mode
+
+0. Exit
+
+[TRANSLATED]
+\yBot Optionen\w
+
+1. Bot schnell hinzufuegen
+2. Speziellen Bot hinzufuegen
+3. Alle Bots sterben
+4. Alle Spieler sterben
+5. Server mit Bots fuellen
+6. Zufaelligen Bot hinauswerfen
+7. Alle Bots hinauswerfen
+8. Waffenmodus auswaehlen
+
+0. Ausgang
+
+[ORIGINAL]
+\yBot Weapon Mode\w
+
+1. Knives only
+2. Pistols only
+3. Shotguns only
+4. Machine Guns only
+5. Rifles only
+6. Sniper Weapons only
+7. All Weapons (Standard)
+
+0. Exit
+
+[TRANSLATED]
+\yBot Waffen-Modus\w
+
+1. Nur Messer
+2. Nur Pistolen
+3. Nur Schrotflinten
+4. Nur Maschinengewehre
+5. Nur Gewehre
+6. Nur Scharfschuetzen-Waffen
+7. Alle Waffen (Standard)
+
+0. Ausgang
+
+[ORIGINAL]
+\yBot Personality\w
+
+1. Random
+2. Normal
+3. Aggressive
+4. Defensive
+
+0. Exit
+
+[TRANSLATED]
+\yBot Persoenlichkeit\w
+
+1. Zufall
+2. Normal
+3. Aggressiv
+4. Defensiv
+
+0. Ausgang
+
+[ORIGINAL]
+\yBot Skill Level\w
+
+1. Stupid (0-20)
+2. Newbie (20-40)
+3. Average (40-60)
+4. Advanced (60-80)
+5. Professional (80-99)
+6. Godlike (100)
+
+0. Exit
+
+[TRANSLATED]
+\yBot Schwierigkeit\w
+
+1. Dumm (0-20)
+2. Neuling (20-40)
+3. Gewoehnlich (40-60)
+4. Geuebt (60-80)
+5. Professionell (80-99)
+6. Wie ein Gott (100)
+
+0. Ausgang
+
+[ORIGINAL]
+\ySelect a team\w
+
+1. Terrorist Force
+2. Counter-Terrorist Force
+
+5. Auto-select
+
+0. Exit
+
+[TRANSLATED]
+\yTeam auswaehlen\w
+
+1. Terroristen
+2. Anti-Terroreinheit
+
+5. Automatisch
+
+0. Ausgang
+
+[ORIGINAL]
+\ySelect an appearance\w
+
+1. Phoenix Connexion
+2. L337 Krew
+3. Arctic Avengers
+4. Guerilla Warfare
+
+5. Auto-select
+
+0. Exit
+
+[TRANSLATED]
+\yModell auswaehlen\w
+
+1. Phoenix Connexion
+2. L337 Krew
+3. Arctic Avengers
+4. Guerilla Warfare
+
+5. Automatisch
+
+0. Ausgang
+
+[ORIGINAL]
+\ySelect an appearance\w
+
+1. Seal Team 6 (DEVGRU)
+2. German GSG-9
+3. UK SAS
+4. French GIGN
+
+5. Auto-select
+
+0. Exit
+
+[TRANSLATED]
+\yModell auswaehlen\w
+
+1. Seal Team 6 (DEVGRU)
+2. German GSG-9
+3. UK SAS
+4. French GIGN
+
+5. Automatisch
+
+0. Ausgang
+
+[ORIGINAL]
+\yWaypoint Operations (Page 1)\w
+
+1. Show/Hide waypoints
+2. Create path begin
+3. Create path end
+4. Remove path begin
+5. Remove path end
+6. Add waypoint
+7. Delete waypoint
+8. Set Radius
+
+9. Next...
+
+0. Exit
+
+[TRANSLATED]
+\yWegpunkte Menue (Seite 1)\w
+
+1. Wegpunkte sichtbar/unsichtbar
+2. Pfad Beginn
+3. Pfad Ende
+4. loesche Pfad Beginn
+5. loesche Pfad Ende
+6. Wegpunkt hinzufuegen
+7. Wegpunkt loeschen
+8. Radius setzen
+
+9. Naechstes...
+
+0. Ausgang
+
+[ORIGINAL]
+\yWaypoint Operations (Page 2)\w
+
+1. Waypoint stats
+2. Autowaypoint on/off
+3. Set flags
+4. Save waypoints
+5. Save without checking
+6. Load waypoints
+7. Check waypoints
+8. Noclip cheat on/off
+
+9. Previous...
+
+0. Exit
+
+[TRANSLATED]
+\yWegpunkte Menue (Seite 2)\w
+
+1. Wegpunkte Statistik
+2. Auto-Wegpunkte an/aus
+3. Fahnen setzen
+4. Wegpunkte speichern
+5. Wegpunkte speichern ohne Test
+6. Wegpunkte Laden
+7. Wegpunkte testen
+8. Noclip Cheat an/aus
+
+9. Vorheriges...
+
+0. Ausgang
+
+[ORIGINAL]
+\yWaypoint Radius\w
+
+1. 0
+2. 8
+3. 16
+4. 32
+5. 48
+6. 64
+7. 80
+8. 96
+9. 128
+
+0. Exit
+
+[TRANSLATED]
+\yWegpunkte Radius\w
+
+1. 0
+2. 8
+3. 16
+4. 32
+5. 48
+6. 64
+7. 80
+8. 96
+9. 128
+
+0. Ausgang
+
+[ORIGINAL]
+\yWaypoint Type\w
+
+1. Normal
+\r2. Terrorist Important
+3. Counter-Terrorist Important
+\w4. Block with hostage
+\y5. Rescue Zone
+\w6. Camping
+7. Camp End
+\r8. Map Goal
+\w9. Jump
+
+\w0. Exit
+
+[TRANSLATED]
+\yWegpunkt Typ\w
+
+1. Normal
+\r2. Wichtig fuer Terroristen
+3. Wichtig fuer Anti Terroreinheiten
+\w4. Fuer Geiseln kein Durchgang
+\y5. Rettungszone
+\w6. Camping
+7. Camping Ende
+\r8. Ziel (Bombe/Geiseln)
+\w9. Sprung
+
+\w0. Ausgang
+
+[ORIGINAL]
+\yWaypoint Flags\w
+
+\yAdd waypoint flag:\w
+
+1. Block with Hostage
+2. Terrorists Specific
+3. CTs Specific
+4. Use Elevator
+
+\yDelete waypoint flag:\w
+
+5. Block with Hostage
+6. Terrorists Specific
+7. CTs Specific
+8. Use Elevator
+
+0. Exit
+
+[TRANSLATED]
+\yWegpunktfahnen:\w
+
+\yWegpunktfahne hinzufuegen:\w
+
+1. Fuer Geiseln kein Durchgang
+2. Wichtig fuer Terroristen
+3. Wichtig fuer Anti Terroreinheiten
+4. Aufzug benutzen
+
+\yWegpunktfahne loeschen:\w
+
+5. Fuer Geiseln kein Durchgang
+6. Wichtig fuer Terroristen
+7. Wichtig fuer Anti-Terroreinheiten
+8. Aufzug benutzen
+
+0. Ausgang
+
+[ORIGINAL]
+No Waypoints for this Map!
+
+[TRANSLATED]
+Keine Wegpunkte fuer die Map!
+
+[ORIGINAL]
+Valid weapon mode is from 1 to 7
+
+[TRANSLATED]
+Gueltiger Waffen-Modus ist von 1 bis 7
+
+[ORIGINAL]
+Waypoint made by: %s
+
+[TRANSLATED]
+Wegpunkte erstellt von: %s
+
+[ORIGINAL]
+WARNING: No waypoint file is found. You can't add bots
+
+[TRANSLATED]
+Achtung: Keine Wegpunkt-Datei gefunden. Kann keine Bots hinzufuegen.
+
+[ORIGINAL]
+Waypoint cleared
+
+[TRANSLATED]
+Wegpunkte zurueckgesetzt
+
+[ORIGINAL]
+Waypoint Editing is ON
+
+[TRANSLATED]
+Wegpunkte-Bearbeitung ist an
+
+[ORIGINAL]
+Waypoint Editing turned OFF
+
+[TRANSLATED]
+Wegpunkte-Bearbeitung ist aus
+
+[ORIGINAL]
+Waypoints are ON
+
+[TRANSLATED]
+Wegpunkte sind AN
+
+[ORIGINAL]
+Waypoints are OFF
+
+[TRANSLATED]
+Wegpunkte sind AUS
+
+[ORIGINAL]
+Noclip Cheat is ON
+
+[TRANSLATED]
+Noclip-cheat ist AN
+
+[ORIGINAL]
+Noclip Cheat is OFF
+
+[TRANSLATED]
+Noclip-cheat ist AUS
+
+[ORIGINAL]
+Showing Direction to Waypoint
+
+[TRANSLATED]
+Zeige Richtung zum Wegpunkt
+
+[ORIGINAL]
+Waypoints loaded
+
+[TRANSLATED]
+Wegpunkte geladen
+
+[ORIGINAL]
+Waypoints saved
+
+[TRANSLATED]
+Wegpunkte gespeichert
+
+[ORIGINAL]
+All Nodes work fine!
+
+[TRANSLATED]
+Alle Wegpunkte funktionieren!
+
+[ORIGINAL]
+Waypoint Nr. %d now cached
+
+[TRANSLATED]
+Wegpunkt Nr. %d zwischengespeichert
+
+[ORIGINAL]
+Auto-Waypoint is ON
+
+[TRANSLATED]
+Auto-Wegpunkte AN
+
+[ORIGINAL]
+Auto-Waypoint is OFF
+
+[TRANSLATED]
+Auto-Wegpunkte AUS
+
+[ORIGINAL]
+Experience saved
+
+[TRANSLATED]
+Erfahrungs-Datei gespeichert
+
+[ORIGINAL]
+Experience is ON
+
+[TRANSLATED]
+Erfahrung sammeln AN
+
+[ORIGINAL]
+Experience is OFF
+
+[TRANSLATED]
+Erfahrung sammeln AUS
+
+[ORIGINAL]
+Waypoint not saved
+
+There are errors, see console
+
+[TRANSLATED]
+Wegpunkte nicht gespeichert!
+
+Es gibt Fehler, Konsole beachten!
+
+[ORIGINAL]
+There are errors, see console
+
+[TRANSLATED]
+Es gibt Fehler, Konsole beachten!
+
+[ORIGINAL]
+WARNING! Jump path not saved from %d to %d\n
+
+[TRANSLATED]
+Achtung! Sprung-Pfad nicht gespeichert von %d zu %d
+

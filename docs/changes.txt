@@ -1,0 +1,58 @@
+5/6/2006:
+- Added support for AMX Weapon Restrictions (** NOT TESTED **). (Thanks to KWo)
+- Fixed issue with team detecting when using MODs whith change player models.
+- Upgraded to Metamod 1.18.
+- Thanks to THE_STORM from E[POD]bot for building this release :)
+
+1/31/2006:
+- Changed the length limitation of translation strings from 256 to 1024 to fix crash problems with "longer" languages.
+- Added German translation. (Thanks to CoCoNUT)
+- Fixed a problem which causes bots don't want to use any hostage.
+
+11/5/2005:
+- Reduced memory usage of translation function.
+
+8/9/2005:
+- Fixed bots joining server problem caused by the latest Steam update.
+
+8/7/2005:
+- Updated for better compatiability with Steam CS 1.0 (** UNTESTED **)
+
+7/30/2005:
+- Added internationalization functionality. See the "language" directory for details.
+
+7/19/2005:
+- Fixed a bug which may make bots get stuck while picking up grenades if there are two dropped grenades at the same location.
+- Remade readme file, now is in HTML format. Several corrections have also been made to the readme file.
+
+7/14/2005:
+- Now the source code should work with all versions of MinGW and/or Dev-C++. (Thanks to Metamod-p project)
+
+6/30/2005:
+- Fixed the version display in the Metamod plugin list.
+- Fixed a problem with experience collecting.
+
+3/21/2005:
+- Updated WaypointsHowToDo.txt file, added comments for "yapb pwp create1/2" and "yapb pwp remove1/2" commands.
+- Added version information in the Windows dll file.
+
+3/5/2005:
+- You can skip parameters in "yapb add" command using "*". Example: "yapb add * * * bot *" will add a bot named "bot" with random skill, personality, team, model
+- Changed liblist.gam. Now uses "\" for pathname in Windows.
+
+2/17/2005:
+- Bot buying ammo after picking up weapons if bot is in buy zone.
+- Bot buying stuff each time they enter buy zone.
+- Changed a bit to ladder handling stuff, bot shouldn't fall off the ladder when getting down now.
+- Source code: added project file for KDevelop 2.
+- Fixed an error in WaypointsHowToDo.txt file.
+
+12/5/2004:
+- *SIGNIFICANTLY* speeded up the waypoint node validation process. Should be *MUCH* faster now.
+- Not all bots will switch to knife at round start.
+- Bots will always take the shortest path to the goal when the bomb is planted (in the hope of fixing odd behavior of CT bots after bomb is planted which made them unable to defuse the bomb).
+- Source code: added project file for Bloodshed Dev-C++.
+
+11/3/2004:
+- Changed a bit to the button usage code.
+

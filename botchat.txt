@@ -1,0 +1,429 @@
+# All Bot Chat Messages are stored here
+# All comments start with a "#" char
+# You can write as much comments as you like, but
+# please avoid using tabs, whitespaces and blank lines
+# (they will be parsed out but you never know!)
+# Also be sure that a Line doesn't exceed 80 chars
+# (including carriage return)
+#
+# Messages for each Type of Chat begin with a marker
+# enclosed in []
+# Marker Types:
+# [BOMBPLANT] Holds the Messages for the Counter Terrorists
+#	      if a Bomb got planted
+# [KILLED]    Bots say this Message if they killed somebody
+# [DEADCHAT]  Bots say these Lines if they are dead and in
+#	      Spectator Mode
+#
+# %f = Name of Player with the most frags
+# %m = Mapname
+# %r = Time until Round ends
+# %s = Name of Player to reply
+# %t = Name of Teammate alive
+# %v = Last Victim of this Bot
+#
+#
+#
+# Counter Messages for Bomb planted:
+# Minimum Number is 1
+#
+[BOMBPLANT]
+Jeeesuzzz Christ, not again!
+Come on %t, let's search the bomb!
+Last time it took me 5 secs to find & defuse it...
+Say, is it the red or the blue wire?
+...And my Heart goes boooom *grin*
+#
+#
+#
+#
+#
+#
+# Messages after killing somebody:
+# Minimum Number is 1
+# For the %v the name of the victim will
+# be inserted
+# NOTE: Include a %v placeholder in every Line!
+#
+[KILLED]
+%v, you're no match for me!
+Sorry, %v. You got in my way.
+You flew back pretty good, %v.
+I had to do it, %v. You understand.
+You should've run while you had the chance, %v.
+I've always been better, %v. Always.
+I bet you hate it when that happens, don't you, %v?
+That'll teach you, %v!
+Hey, come on, %v! You almost hurt me this time.
+Ha...ha!
+You are nothing, %v. Nothing at all.
+%v I worry about you...
+Sorry %v, my Headshot Script is better than yours.
+#
+#
+#
+#
+#
+#
+#
+# Chat Messages when dead and bored
+# !!Minimum Number is 9!!
+#
+[DEADCHAT]
+It makes me sick to look at those Fools
+It's time for a mapchange, isn't it?
+%t GO,GO,GO!!
+I'm so booored!
+I can't believe %f isn't cheating
+Spectating sucks...
+I wish someone good would join the server.
+That looked painful.
+This is quite fun.
+%r in the round and I'm already spectating :(
+Why does everyone keep trying to hurt me :)
+Visit http://podbot.nuclearbox.com
+My handwrist already hurts...
+This Map sucks hard...
+I'm having a bad day
+%r and %t is still alive! Something must be wrong...
+Will they stop camping now? Only %r left!!
+I'm better at Quake 3, that's for sure!
+Still %r in this round 
+Botman must be such a cool guy...
+Stupid Bots!
+Look at those idiots!
+I bet %t won't make it through the round
+I'm so tired today...
+I really should go to bed now.
+I usually don't play that bad!
+No %m today, please!
+I really hate %m :(
+Sniping is all they can do.
+Do you know Bots-United?
+LOL! Look at %t!
+Please vote for a mapchange!!!
+Did one of the bots get stuck already?
+Boooooom!!! *lol*
+Insane in the membrane, hehe!
+I'm sure that Guy used an Aimbot!
+HEY %f YOU DAMN CHEATER!
+Are there bots in this Game?
+Would you give me your Headshot Script?
+Next Round we should stick together.
+Fuck all those Teamkillers!!!
+Woah %f has nice stats!!
+What are Clans all about? I don't get it
+Do you know Jumbot? It really kicks Ass!
+If botman is cool, what is TheFatal then?
+Fucking lagged!!
+IMHO NNBot is much better than RealBot.
+Too bad Android Bot is updated so slowly.
+I'm off for a cigarette break...
+Why did they include the vehicles in CS?
+I had to reload and he shot me in the head!
+
+# Start of the "dynamic" replies from here
+# After each @KEY Tag you need to specify the
+# keywords in quotation marks and uppercase. You can
+# have several keywords (aliases) each separated by a comma.
+# After the keywords line, the answers or messages to this
+# special keyword need to be given. In theory there can be an unlimited
+# number of answers of course you should care about the used memory ;)
+
+[REPLIES]
+
+@KEY " AGAIN "
+%s, things are always repeating - aren't they?
+And I'm sure it wasn't the last time...
+That's the way things go, hey...
+
+@KEY "AIMBOT", "WALLHACK"
+%s, are you cheating?
+Even PunkBuster fails to detect some of them...
+You can't be sure nowadays if someones's good at playing or cheats
+Aimbots are cool, shut up %s!
+Wallhacks are evil tools of the devil ;)
+
+@KEY " ALWAYS "
+That's not always, %s!
+I just like it :-)
+Come on %s, that was only the second time!
+
+@KEY "ANDROID"
+Ah yes, those were the times...
+%s was it your first Bot too?
+Does anybody know what DaTa does today?
+You can't play with Android on %m, can you?
+
+@KEY "BOTMAN"
+Who is this botman everybody is talking about???
+Visit his website at http://www.planethalflife.com/botman
+Without his source code many bots wouldn't exist!
+I wonder when HPB-Bot will be finished...
+Did you play his HPB-Bot yet?
+
+@KEY " BOT ", "BOTS"
+Why are you always talking about them?
+There are no bots on this server %s, I tell you!
+Bots are cool!!!
+What's your favorite bot, %s?
+If you want to program your own, ask botman!
+Bots, all the time bots - you should start playing with humans.
+Most bots are still very stupid!
+
+@KEY "CAMPER", "CAMPING"
+I really hate those campers!
+Camping sucks!
+Don't you camp sometimes %s?
+Camping's often the only option to win...
+Yes, good 'ole Camper-Strike...
+
+@KEY "CHEAT"
+Those damn cheaters are ruining the entire game!
+I suspect that %f is cheating
+I hate cheaters!
+Cheating sucks!
+Why are so many people cheating?
+Punkbuster could help...
+Play with bots - they don't cheat!
+
+@KEY " CLAN "
+What are these clans all about?
+I was in a clan once, but it sucked hard.
+What clan are you from, %s?
+Do you want to enter our clan, %s?
+Playing in a clan is for people who got no life...
+
+@KEY " CS ", "COUNTERSTRIKE", "COUNTER-STRIKE", "CSTRIKE"
+Counter-Strike is boring nowadays...
+%s how long do you play CS?
+CS all the way from the very first beta!
+There are too much newbies playing it.
+Too many people online cheat in CS
+It's not as much fun as it used to be
+
+@KEY " DOD ", "DAY OF DEFEAT"
+I don't get what people like in DoD
+CS all the way...
+%s do you think it will get as popular as CS?
+%s do you prefer DoD over CS?
+Day of Defeat is a hopeless MOD, IMHO.
+
+@KEY " ENGINE "
+I heard the HL Engine is a hybrid between Quake1 & Quake2, odd huh?
+%s, don't you miss the time when an engine was a Software Engine?
+The HL Engine is still quite good, despite its age...
+Code your own engine %s!
+
+@KEY "FUCK", "DAMN", "PISS"
+Don't swear, %s!
+Nasty %s!
+Yes, you're right, %s. Now SHUT UP!
+Watch your language, %s!
+%s, don't use this word again - that's impolite!
+
+@KEY "HEHE", "HAHA", "LOL", ":)"
+I'm glad that at least you have your fun, %s...
+Enjoy yourself while you still can, %s!
+Very funny indeed, %s...
+Good one %s!
+
+@KEY "I THINK ", "I BELIEVE "
+You think too much, %s ;-)
+And I think you should shut up and play!
+And you really do believe that, %s?
+What makes you think so?
+Plz give me your ICQ Number %s
+
+@KEY " MUSIC ", " BAND "
+Umm...I don't care as long as it's no commercial shit
+Underground Electro Polka is the real deal!
+Do you still use Napster %s?
+Somebody got good MP3 Links?
+
+@KEY "NNBOT"
+Too bad NNBot is discontinued...
+Try JoeBot if you liked NNBot %s
+%s did you hear of Ditlew's new MOD?
+
+@KEY "PARABOT"
+ParaBot is a the coolest Deathmatch Bot I've ever played
+%s you should try ParaBot, it's great!
+It's so sad no CSBot has the great Nav of Parabot so far
+I heard it already supports 3 HL MODS by now
+It just crashes a lot on my computer
+
+@KEY " PING ", "LAGG"
+I always have a Ping of 5, I'm on DSL!!
+My connection sucks...
+Where are you from %s?
+Play offline with Bots if your connection sucks
+Just change your provider %s!
+
+@KEY "POD-BOT", " POD ", "PODBOT"
+I heard it's the best bot for CS, I'm not sure though...
+Yeah, it rulez!
+People tell they use some kind of wallhack, is it true?
+I wonder what CF is up now
+POD-Bot source code has already been released, don't you know %s?
+There're too many PB clones, E[POD]bot, IvPBot, POD-Bot mm, YaPB...
+
+@KEY "PUNKBUSTER"
+Don't be a PUNK! (support www.punkbuster.com)
+I'm always lagging when using PunkBuster
+Tony Ray of PB is kind of weird...
+
+@KEY "Q3", "QUAKE"
+Q3 has a bad lighting IMO
+Half-Life still rules %s!
+So many FPS games are based on Quake engine
+Have you heard of DMC, %s? ;-)
+
+@KEY "REALBOT", " RB "
+Is RB still unwaypointed %s?
+Is Tub still working on RB? I have asked Stefan but he didn't answer me
+RB is too laggy, and I only have a slow computer
+I wonder why they removed it from the official CS web site
+Have you got the latest WIP?
+Visit http://realbot.bots-united.com
+Stefan isn't lonely now, evy joined the team
+
+@KEY "SCRIPT"
+Scripts are for losers
+%s, you prolly don't know how to bind keys?
+Did you know that even buying scripts are considered cheating?
+
+@KEY "SERVER"
+I'm always on this server
+Me & my friends play a lot on this server
+I believe this server's got a good map rotation
+
+@KEY "SORRY"
+Yeah, afterwards everybody says he's sorry!
+The excuse doesn't help me now, %s!
+Next time you better think before you start doing something, %s!
+I'm sorry, too!
+You don't know how sorry you will be for doing that...
+
+@KEY "TEAMKILL", " TK "
+Teamkillers should be banned from this server.
+Who's the teamkiller %s?
+I like stabbing my teammates, MWUHAHA!!
+Did %t kill you? He often does!
+Where's the Admin? He should take care of it...
+%s just sit out %r and pay him back! 
+
+@KEY "TIRED", "SLEEP"
+Go to bed, %s
+Have some rest, %s...
+Want some coffee %s?
+Oh come on %s! One more round... 
+
+@KEY "VOTE", "MAPCHANGE"
+Nah, I like %m
+Just because you're always dead %s?
+%m is great, shut up!
+%m ownz!
+Yep. We should vote now.
+
+@KEY "WHAT ", "WHY ", "WHERE ", "WHO ", "WHEN ", "HOW "
+You will never find out, %s!
+Yeah, that's really strange %s...
+The answer is out there, %s ;)
+No idea, %s
+Dunno.
+What do you think %s?
+I won't tell you, %s!
+Find out yourself, %s!
+Good question, %s!
+
+@KEY "POXBOT", "POX-BOT", "STEVE++"
+I wonder why POX-Bot is removed from the Bots-United
+It's just a POD-Bot fixup, no really new features
+Looks like Steve++ is nowhere to find... dunno what he's up now
+Try E[POD]bot and IvPBot if you like POX-Bot, %s!
+
+@KEY "YAPB", "WHISTLER", "WEI MINGZHI", "WEI-MINGZHI"
+I still prefer POD-Bot mm
+Even it's first version is also quite stable
+Visit http://yapb.bots-united.com, there are also lots of other stuff
+Yet another POD-Bot clone...
+What? Are you talking about YaBB %s?
+Why is Whistler's real name so difficult to spell?
+
+@KEY "SPLORYGON", "POD2.6MM", "POD26MM", "PODMM" "POD-BOT MM"
+Yes, the most popular POD offspring...
+It rulez!!!
+I wonder why PMB isn't working on it any more
+Visit http://podbotmm.bots-united.com
+It crashed a lot when I tried it, I'm not sure if it's better now
+I like its waypoint editor
+
+@KEY "BU ", "BOTS UNITED", "BOTS-UNITED"
+RACC, RealBot, HPB-Bot, JoeBot are all available there...
+Do you know what this 'United-Bot' is, %s?
+I've been told that I can find a DoD bot there!
+There is also United-Admins, do you think its a conspiracy?
+
+@KEY "RACC", "PIERRE-MARIE BATY", " PMB"
+That's a good unwaypointed bot, don't you think?
+PMB must be such a cool guy
+Visit http://racc.bots-united.com
+There are also tons of Metamod plugins on his site
+Do you know PMB is also working on HPB-Bot and POD-Bot?
+I wonder when RACC will be completed...
+
+@KEY "JOEBOT", "@$3.1415RIN", "AS3.1415RIN"
+What's the meaning of '@$3.1415rin', %s? I just can't understand
+Visit http://joebot.bots-united.com
+Funnily JoeBot got famous when NNBot quit...
+I wonder where else Neural Networks could be applied
+Do you know JoeBot XP, %s? I'm sure it will be cool
+
+@KEY "AKIMBOT", "BLUESY"
+It supports a whole load of mods, but it's just too dumb
+Is bluesy from Israel?
+Looks like it's just botman's bot with additional mods support
+Visit http://akimbot.nuclearbox.com
+It's a pity that bluesy lost his source code
+
+@KEY "STEAM"
+Steam just sucks!!!
+What's your Steam nickname, %s?
+How long did you take to download CS on Steam?
+I wonder what will happen if Valve turn off their Steam server... :P
+
+[UNKNOWN]
+Bla bla bla...
+What did you say, %s?
+Concentrate on the game, %s!
+Chatting with you %s is so great!
+These damn chat-messages are freaking me out!
+Don't spam, %s!
+How do you find the time to type all this crap???
+Yeah, %s. You're right!
+No way, %s...
+Where are you from, %s?
+I can't believe how you can play and type at the same time, %s!
+Are you sure, %s?
+I see, %s!
+Why is everybody always saying the same things???
+What the heck are you talkin' about, %s?
+Hey, shut up and play, %s!
+You said somethin', %s?
+Who said that?
+Oh, really?
+Very funny, %s!
+I'm in the best clan of my country!
+I hate these stupid comments, %s!
+Does anybody know how to do the Gauss-jump?
+ZZZZZZZzzzzzz
+Wazzzzuuuuuuup?
+I'm so booooored... 
+Have you got ICQ, %s?
+It's damn slow today...
+OMG you're weird!
+Do you want to play or chat all the time?
+I don't really want to know %s
+Certainly.
+Huh? WTF?

@@ -1,0 +1,28 @@
+#include <windows.h>
+
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILETYPE VFT_DLL
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "040904E4"
+		 {
+			 VALUE "CompanyName", "Count Floyd, Wei Mingzhi"
+			 VALUE "FileVersion", "1.0"
+			 VALUE "FileDescription", "Yet another POD-Bot"
+			 VALUE "InternalName", "YaPB"
+			 VALUE "LegalCopyright", ""
+			 VALUE "LegalTrademarks", "YaPB"
+			 VALUE "OriginalFilename", "PODBot.dll"
+			 VALUE "ProductName", "YaPB"
+			 VALUE "ProductVersion", "1.0"
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x0409, 1252
+	 }
+}
+

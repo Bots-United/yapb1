@@ -1,0 +1,151 @@
+[ Parts of this Text were directly taken and tweaked from POD-Bot 2.5 Readme File ]
+
+* PODBot V1.2 Waypoint Makers please read:
+
+If you previously did some waypoints for PODBot you will notice some differences. First, you are now allowed to have connections between 8 Waypoints at the same time (was 4 before). Also the Wayzone Radius gets calculated instantly now when placing a waypoint. And even more important you should now do lots of waypoints since the Bots will try to to vary them. Also try to place waypoints at Places where you would like them to take cover (see below for a more lengthy explanation).
+
+------------------------------------------------------------------
+
+1. Waypoints, what are they?
+
+Waypoints are locations in the maps that the bots will use when navigating. They allow the bot to roam about the map without having to blindly bump into walls.  Waypoints can be thought of like the bread crumbs in the Hansel and Gretel story.  They are something marking a path to make it easier to follow. The waypoints are not displayed while the game is being played.  The bots "know" which way to go by following the path laid out by these waypoints.
+
+In order to get the bots to cover the entire map when playing the game, waypoints should be laid out all over the map.  Without the waypoints the bots will just randomly run around and will tend to stay in the same area. Waypoints also allow the bot to know where specific goals are in the game. You couldn't play capture the flag unless you knew where the flag was and where the flag needed to be taken after being captured.  Waypoints are what makes all of these things possible.  Bots with sufficiently advanced waypoint information and algorithms would be able to find the shortest distance between points in the map and navigate from their current position to some goal on the other side of the map.
+
+This document describes the commands needed to create or edit a waypoint file (to be used with the POD-Bot).  When creating or editing a waypoint file it is best NOT to have any bots wandering around at the same time. Create a LAN game, and join the game then start laying out waypoints for
+a map.  Save the waypoint file, disconnect from the server, then start the game again, this time with the bots to see how well (or poorly) they follow the waypoints you have created.
+
+
+2. What do waypoints look like in the map?
+
+The waypoints are displayed using vertical lines that look like lightning or electric streams.  The vertical line used to draw the waypoint is the same height as the player.  The point in space at the center of this vertical line is what is actually used as the waypoint. Different Types of waypoints have different colors. 
+
+Waypoints are stored in a file with the same name as the map file name but using the extension ".pwf" instead of the map file extension of ".bsp".  For example, the waypoint file for the map de_dust would be de_dust.pwf.It will be stored in the Half-Life\cstrike\addons\yapb folder and then in the folder you specified with yapb_wptfolder (defaults to "wptdefault").
+Waypoint files are automatically loaded when the map is loaded (if they exist).  If the waypoint file does not exist, you will need to create it using the directions contained in this document.
+
+
+3. Waypoint console commands Summary
+
+The following Waypoint commands are available (note these ARE case sensitive):
+
+"yapb wp init" - Deletes all waypoints in the map. Do *NOT* try this unless you want to redo all the waypoints !
+"yapb wp on" - Turns on displaying of waypoints.
+"yapb wp on noclip" - Turns on waypoint editing with noclip cheat. This allows you to fly and you don't collide with walls. Useful for doing swim waypoints.
+"yapb wp off" - Turns off displaying of all waypoints.
+
+"yapb wp add" - Adds a waypoint at the current player location. A Menu will pop up where you have to select the different types of waypoints
+"yapb wp delete" - Deletes the waypoint nearest to the player (see below).
+
+"yapb wp flags" - Allows you to manually add/remove Flags to a waypoint.
+
+"yapb wp setradius x" - Manually sets the Wayzone Radius for this waypoint to value x
+
+"yapb wp stats" - Shows the number of different waypoints you did already set.
+
+"yapb wp check" - Checks if all Waypoints connections are valid
+
+"yapb wp save" - Saves the current waypoints to a file (see below).
+"yapb wp load" - Loads the waypoints from a waypoint file (see below).
+"yapb wp save oldformat" - Saves the current waypoints to a file as POD-Bot 1.4 waypoint format, which is much smaller. NOTE: All jump connections won't be saved.
+"yapb wp save nocheck" - Saves the current waypoints to a file without validating.
+
+"yapb wp menu" - Show the waypoint editor menu.
+
+"yapb awp" - Displays the status of the autowaypoint setting.
+"yapb awp on" - Turns on autowaypoint setting (see below).
+"yapb awp off" - Turns off autowaypoint setting.
+
+"yapb pwp add x" - Connects the nearest Waypoint to you, with the waypoint whose number specified with Value x.
+"yapb pwp delete x" - Disconnects the nearest Waypoint to you, with the waypoint whose number specified with Value x.
+"yapb pwp create1" - Sets the first waypoint in a manual path.
+"yapb pwp create2" - Sets the second waypoint in a manual path
+"yapb pwp remove1" - Sets the first waypoint in removing a path.
+"yapb pwp remove2" - Sets the second waypoint in removing a path.
+
+To use the waypoint commands, you will have to use the console.  You must start the game with the console option enabled (use "hl.exe -console" in the Target: line of a shortcut or use "Half-Life Console" in your SIERRA menu from the Windows Start button).  Use the '~' key to bring down the console.  Enter the console commands that you wish, then use the '~' key again to return to the game.
+
+You can make things easier by binding console commands to keys on the keyboard.  Just type "bind" followed by the key you want to bind to, followed by the console command.  You will have to use double quotes on the console command if it's more than one word.  Here's an example of console commands that I use when editing waypoints...
+
+bind a "yapb wp add"
+bind d "yapb wp delete"
+bind l "yapb wp load"
+bind w "yapb wp save"
+
+The 'a' key will manually add a waypoint.  The 'd' key will delete a waypoint. The 'l' key will load the most recently saved waypoint file (useful if you have added some waypoints but don't want to save them and want to go back to the previously save waypoint list, sort of like an "undo").  The 'w' key (for "write waypoints") will save the list of waypoints to the waypoint file.  I tried using 's' (for "save waypoints"), but I kept hitting 's' by mistake when I wanted to add or delete a waypoint.
+
+Using "yapb wp add" will place a waypoint at the location that the player is currently at in a map.  Waypoints can be placed anywhere the player can go. Waypoints can even be placed in mid-air (as long as the player can get to that location).  One way to do this is by jumping or running off of a ledge or cliff. When placing a waypoint, you will hear a sound to indicate that the waypoint has been dropped (the sound is the same sound the crossbow bolt makes when striking an wall). You then have to specify the Type of waypoint you want to place here.
+
+"Normal Waypoint" sets a Waypoint which is used for normal walking from one point to each other. From V1.4 on you should place lots of them, since the Bots use them for hiding and varying their paths. Color is green.
+
+"Terrorist Important Waypoint" and "CT Important Waypoint" These are strategical waypoints for that team. Bots use these waypoints to patrol the map. How they use this, heavily depends on the map type. In a DE Map you should place a lot of CT Waypoints around the Bomb Plant Zone and only 2 or 3 strategical waypoints for Terrorists. On a DE Map Counter Bots will most of the time pick a Counter Waypoint as a destination and only sometimes pick a Terrorist waypoint. Terrorists are allowed to pick any of them as a goal waypoint. This behaviour changes with the maptype, in a CS map for example it is vice versa. You NEED to have some of these, but don't place too many. Average count for this is below 10 for each. Terrists WP Color is red, Counter Waypoints are blue.
+
+"Block with Hostage Waypoint"
+If you set this flag on a waypoint, bots won't take this waypoint if a hostage is following them.
+
+"Rescue Waypoint"
+This is only needed on Hostage Maps. It's the location where you want the CT Bots to rescue the hostages. Usually only 1 is needed. Color is white.
+
+"Goal Waypoint"
+Place this at a position where Goals of the Map need to be achieved. In DE maps this is a bomb plant spot and on cs maps Counter look here to rescue some hostages. In AS maps these are the Escape points for the VIP. Color is purple.
+
+"Campstart Waypoint"
+This is a camping (or sniper if you prefer) waypoint. To place it, look into the direction you want the Bot to start looking at when camping. To let him crouch at that position just press the duck button while adding it. You also need to specify the:
+
+"Campend Waypoint"
+Selecting this will set the end direction for the Bot to look at when camping. Look straight into the direction where you want the Bot to look and select it. Note: you can't set a campend waypoint before doing a campstart waypoint. Normal Color is cyan, if you made it team specific it will have a touch of red if Terrorist WPT or blue if CT.
+
+"Jump Waypoint"
+By selecting it, your moves will be monitored and if you jump, a normal waypoint will be placed at the position you started to jump and another will be placed where you landed. The Waypoint Type as said before is a standard waypoint but a red connection line will show you that there is a jump connection between the two. You can also create jump connections between already existing waypoints, just make sure you're in the near of the first when jumping and land in the near of the destination waypoint. Note that this will adjust the waypoints origin on the average position of the previous position and your jump position. You can even have the bots jump to a ladder or do several jumps after each other !
+
+* NOTE *
+To set a crouch waypoint, just keep holding your duck key. Also note that placing the "Important" waypoints differs from maptype to maptype. On defusion maps, Terrorist will be able to choose a Terrorist Waypoint OR a Counter Waypoint. Counter stay most of the time at Counter Waypoints. On cs maps, Terrorists choose Terrorists waypoints most of the time and Counters can walk to any Counter waypoint OR Terrorist waypoint. All other waypoints will be chosen team independent (even camp spots).
+
+Using "yapb wp delete" will remove the waypoint closest to the player.  The waypoint MUST be within 40 units from the player (about 1/2 the player height) in order to be removed.  You will need to stand fairly close to the waypoint to be able to remove it.  This prevents you from accidentally removing a waypoint on the other side of the room.  When removing a waypoint you will hear a sound indicating that the waypoint was removed (the same sound the tripmine makes when placed on a wall).
+
+Using "yapb wp save" or "yapb wp save oldformat" will save the waypoint data to the waypoint file.  The waypoint file will have the same name as the current map with an extension of ".pwf".  The file will be saved into the "cstrike/addons/yapb" Folder. Your current player name will be saved as the waypoint file author.
+
+Using "yapb wp load" will clear out all waypoints in the current map and load them from the waypoint file in the maps folder.  This is a good way to "undo" a bunch of waypoints that you have created but do not wish to save.  There is no way to "undo" a single waypoint.  You will have to use the "yapb wp delete" command to remove waypoints one-by-one.
+
+The "yapb awp" command allows you to automatically drop waypoints as you run around in a map.  To turn autowaypointing on use "yapb awp on". As you run around the level waypoints will be dropped every 200 units automatically.  No waypoint will be dropped if another waypoint is already within 200 units of your current position.  So if you want to place lots of waypoints fairly close together you may have to manually place some of the waypoints using the "yapb wp add" command.  Autowaypointing keeps track of where the last waypoint was dropped (either manually or from autowaypointing) and will place another waypoint when you are 200 units
+from the last waypoint.  If you don't like where autowaypointing placed a waypoint and want to move it a little bit, you can delete the waypoint using "yapb wp delete" (but turn off autowaypointing before, since it will place a new waypoint otherwise). 
+
+When using autowaypointing, try to stay in the center of narrow hallways and always place a waypoint on BOTH sides of a door.  You may have to place some of these waypoints manually using "yapb wp add" since places like intersections of hallways and doorway entrances and exits don't usually fall exactly at the location where autowaypoint would want to place a waypoint.
+
+Whenever you get close to a waypoint yellow or white lines will be drawn to all of the other waypoints that the bot would consider to be "reachable". If the connection is a two-way connection the line is yellow, one-way connections appear white. These "reachable" waypoints would be waypoints that are clearly visible from the current location.  Certainwaypoints will be disallowed as reachable for one reason or another.  For example, waypoints suspended in mid-air above the bot would not be considered reachable since the bot couldn't jump high enough to get to them.  Also waypoints that are too far away from the current location would not be considered reachable.  You may have waypoints that are close enough to each other, but across a wide gap that would be too wide to jump.  If the far waypoint is close enough and clearly visible, it would still show as "reachable" since I currently don't have a method to determine if the bot can get to that waypoint or not.
+
+The bots will ONLY go from one waypoint to another if there is a path between them.  Get in the habit of turning on the pathwaypoint setting when creating waypoint files so that you can see the waypoint paths and will know whether or not a path exists between two waypoints.  Also get in the habit of checking that paths exist BOTH WAYS between waypoints.  Just because a path is drawn from point A to point B, doesn't mean that a path exists from point B to point A.
+
+The "yapb pwp add <waypointnr>" command allows you to manually assign a path between 2 waypoints.  This is needed in some cases where the waypoints are blocked (by doorways or other objects) and you wish to create a path between these waypoints. Move close to the waypoint you wish the path to start from and use the "yapb pwp add x" command.
+
+Of course the "x" must be replaced by a valid waypoint number. The actual Waypoint Number you're standing on, will be shown in the upper corner of your HUD (if you turned pathwaypoint on). For example to manually assign a path between Waypoint Nr. 250 and 251, you first should stand in the near of Waypoint Nr. 250. Then type in:
+"yapb pwp add 251"
+and it will get connected.
+
+You should now see a white waypoint path line being draw from the start waypoint to the end waypoint.  Note that this is a ONE-WAY connection.  If you wish to create a path back in the other direction you will have to start with the second waypoint and end the path back at the first waypoint.
+
+The "yapb pwp delete x" command is just like the "add" command except that it removes a path (connection) from the starting point to the ending point.  This is necessary in some cases where
+you may have a door that opens from one side and allows you to go through but once the door closes you can't go back through the other way.
+
+The "yapb pwp create1" and "yapb pwp create2" commands allow you to manually assign a path between 2 waypoints.  This is needed in some cases where the waypoints are blocked (by doorways or other objects) and you wish to create a path between these waypoints.  Move close to the waypoint you wish the path to start from and use the "yapb pwp create1" command.  You will hear a sound indicating that waypoint is selected.  Now move to the second waypoint where you want the path to terminate.  Use the "yapb pwp create2" command to end the path.  You should now see a white waypoint path line being draw from the start waypoint to the end waypoint.  Note that this is a ONE-WAY connection.  If you wish to create a path back in the other direction you will have to start with the second waypoint and end the path back at the first waypoint.
+
+The "yapb pwp remove1" and "yapb pwp remove2" commands are just like the "create1" and "create2" commands except that they remove a path from the starting point to the ending point.  This is necessary in some cases where you may have a door that opens from one side and allows you to go through but once the door closes you can't go back through the other way.
+
+When adding waypoints use the pathwaypoint feature to verify that waypoints are actually reachable.  Sometimes you add a waypoint and it appears close enough and it also appears to be in plain sight, but the Half-Life engine doesn't indicate that the waypoint is "reachable". Be sure to check this in BOTH directions when defining a waypoint path. Usually you don't have to be too careful about waypoint placement, but in some situations, you may have to spend more time carefully laying out waypoints to get them to be "reachable" (ladders are a good example).
+
+Alternatively (especially if you can't remember all these commands), you can also use the waypoint operating menu to edit waypoints. Press the "-" key and the menu will be shown. You can do most of waypoint operations there.
+
+To set crouch waypoints, simply crouch when adding the waypoint.  You will notice that the waypoint line is shorter than a normal waypoint.  Bot will crouch automatically when approaching a crouch waypoint (if it's not a camping waypoint).
+
+Try placing waypoints at intersections in hallways (do use some "important" waypoints at crossings). Try not to place waypoints in places where the bots would bump into corners of walls or other obstacles when trying to get from one waypoint to the next.  Remember the bots won't always take what you consider to be the "obvious" choice when choosing the next waypoint.  Try to limit the choices that they have to keep them from heading off in the wrong direction. Also remember that the Bots could go backward in a fight and might not find a waypoint. In that special case they wouldn't find a near enough waypoint (they only search in-between 200 Units) and get stuck forever. Since PODBot V1.4 it's important to have a lot of waypoints together to allow the Bots a wider choice. Also put some waypoints in corners or behind walls/doors so they can take good cover positions. The Bots will try to take cover at waypoints
+a) not seen by the enemy and
+b) the one with the smallest wayzone radius in their range 
+
+What are the Wayzones (displayed in blue lines starting from the origin of the waypoint when pathwaypoint display is on) ?
+
+Bots will pick a point inside this radius for their destination origin (based on things like orientation etc.), this just makes movement not that "static". Ladder waypoints, camp waypoints and goal waypoints will always have a radius of 0. Don't try to change it ! After POD-Bot calculated all Zones you should walk all over your waypoints to verify that they are reachable within their radius. Try to be careful with the radius. If your path bends around corners it's better to lower the radius. You should set the radius to 0 if the Path goes through some narrow doorways or similar. You manually assign a new value by standing near to the waypoint and typing "yapb wp setradius x". Where x is the value you want to assign. Valid ranges are 0-128. The bigger, the wider it is. You'll also notice, if you turned on pathwaypointing some lines will show you the radius of the actual waypoint (if it's not 0). 
+
+Some further advices for making waypoints:
+I start by typing "yapb wp on". After that I type "yapb awp on". Then I try to cover the map with waypoints everywhere I want the bots to roam. Then I try to think of the important points for each team. I go to that position, delete the "normal" waypoint and instead set a strategical waypoint at that position. Then I place the goal waypoints, rescue waypoints and ladder waypoints. After that I calculate all wayzones and try to detect waypoints with radius mistakes. Then I do a lot of test playing until I'm finally satisfied with all the movement.
+
+
+Happy Waypointing !
