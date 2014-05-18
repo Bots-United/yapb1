@@ -6,16 +6,16 @@
 
 #include "bot.h"
 
-#ifndef __linux__
+#ifdef _WIN32
 #ifdef __BORLANDC__
 #define h_Library _h_Library
 #endif // __BORLANDC__
 typedef void (FAR *LINK_ENTITY_GAME)(entvars_t *);
 extern HINSTANCE h_Library;
-#else // __linux__
+#else // _WIN32
 typedef void (*LINK_ENTITY_GAME)(entvars_t *);
 extern void *h_Library;
-#endif // __linux__
+#endif // _WIN32
 
 #define LINK_ENTITY_TO_GAME(mapClassName)                \
    extern "C" EXPORT void mapClassName(entvars_t *pev)   \

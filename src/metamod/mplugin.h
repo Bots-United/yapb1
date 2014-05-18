@@ -38,7 +38,7 @@
 #define MPLUGIN_H
 
 #include <time.h>			// time_t, etc
-#include <malloc.h>			// malloc, etc
+#include <string.h>			// malloc, etc
 
 #include <eiface.h>			// DLL_FUNCTIONS, etc
 

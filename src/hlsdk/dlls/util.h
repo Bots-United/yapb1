@@ -23,7 +23,7 @@
 #ifndef ENGINECALLBACK_H
 #include "enginecallback.h"
 #endif
-inline void MESSAGE_BEGIN( int msg_dest, int msg_type, const float *pOrigin, entvars_t *ent );  // implementation later in this file
+static inline void MESSAGE_BEGIN( int msg_dest, int msg_type, const float *pOrigin, entvars_t *ent );  // implementation later in this file
 
 extern globalvars_t				*gpGlobals;
 
@@ -31,18 +31,18 @@ extern globalvars_t				*gpGlobals;
 #define STRING(offset)		(const char *)(gpGlobals->pStringBase + (int)offset)
 #define MAKE_STRING(str)	((int)str - (int)STRING(0))
 
-inline edict_t *FIND_ENTITY_BY_CLASSNAME(edict_t *entStart, const char *pszName) 
+static inline edict_t *FIND_ENTITY_BY_CLASSNAME(edict_t *entStart, const char *pszName) 
 {
 	return FIND_ENTITY_BY_STRING(entStart, "classname", pszName);
 }	
 
-inline edict_t *FIND_ENTITY_BY_TARGETNAME(edict_t *entStart, const char *pszName) 
+static inline edict_t *FIND_ENTITY_BY_TARGETNAME(edict_t *entStart, const char *pszName) 
 {
 	return FIND_ENTITY_BY_STRING(entStart, "targetname", pszName);
 }	
 
 // for doing a reverse lookup. Say you have a door, and want to find its button.
-inline edict_t *FIND_ENTITY_BY_TARGET(edict_t *entStart, const char *pszName) 
+static inline edict_t *FIND_ENTITY_BY_TARGET(edict_t *entStart, const char *pszName) 
 {
 	return FIND_ENTITY_BY_STRING(entStart, "target", pszName);
 }	
@@ -99,14 +99,14 @@ typedef int BOOL;
 //
 #ifdef DEBUG
 	extern edict_t *DBG_EntOfVars(const entvars_t *pev);
-	inline edict_t *ENT(const entvars_t *pev)	{ return DBG_EntOfVars(pev); }
+	static inline edict_t *ENT(const entvars_t *pev)	{ return DBG_EntOfVars(pev); }
 #else
-	inline edict_t *ENT(const entvars_t *pev)	{ return pev->pContainingEntity; }
+	static inline edict_t *ENT(const entvars_t *pev)	{ return pev->pContainingEntity; }
 #endif
-inline edict_t *ENT(edict_t *pent)		{ return pent; }
-inline edict_t *ENT(EOFFSET eoffset)			{ return (*g_engfuncs.pfnPEntityOfEntOffset)(eoffset); }
-inline EOFFSET OFFSET(EOFFSET eoffset)			{ return eoffset; }
-inline EOFFSET OFFSET(const edict_t *pent)	
+static inline edict_t *ENT(edict_t *pent)		{ return pent; }
+static inline edict_t *ENT(EOFFSET eoffset)			{ return (*g_engfuncs.pfnPEntityOfEntOffset)(eoffset); }
+static inline EOFFSET OFFSET(EOFFSET eoffset)			{ return eoffset; }
+static inline EOFFSET OFFSET(const edict_t *pent)	
 { 
 #ifdef _DEBUG
 	if ( !pent )
@@ -114,7 +114,7 @@ inline EOFFSET OFFSET(const edict_t *pent)
 #endif
 	return (*g_engfuncs.pfnEntOffsetOfPEntity)(pent); 
 }
-inline EOFFSET OFFSET(entvars_t *pev)				
+static inline EOFFSET OFFSET(entvars_t *pev)				
 { 
 #ifdef _DEBUG
 	if ( !pev )
@@ -122,9 +122,9 @@ inline EOFFSET OFFSET(entvars_t *pev)
 #endif
 	return OFFSET(ENT(pev)); 
 }
-inline entvars_t *VARS(entvars_t *pev)					{ return pev; }
+static inline entvars_t *VARS(entvars_t *pev)					{ return pev; }
 
-inline entvars_t *VARS(edict_t *pent)			
+static inline entvars_t *VARS(edict_t *pent)			
 { 
 	if ( !pent )
 		return NULL;
@@ -132,22 +132,22 @@ inline entvars_t *VARS(edict_t *pent)
 	return &pent->v; 
 }
 
-inline entvars_t* VARS(EOFFSET eoffset)				{ return VARS(ENT(eoffset)); }
-inline int	  ENTINDEX(edict_t *pEdict)			{ return (*g_engfuncs.pfnIndexOfEdict)(pEdict); }
-inline edict_t* INDEXENT( int iEdictNum )		{ return (*g_engfuncs.pfnPEntityOfEntIndex)(iEdictNum); }
+static inline entvars_t* VARS(EOFFSET eoffset)				{ return VARS(ENT(eoffset)); }
+static inline int	  ENTINDEX(edict_t *pEdict)			{ return (*g_engfuncs.pfnIndexOfEdict)(pEdict); }
+static inline edict_t* INDEXENT( int iEdictNum )		{ return (*g_engfuncs.pfnPEntityOfEntIndex)(iEdictNum); }
 inline void MESSAGE_BEGIN( int msg_dest, int msg_type, const float *pOrigin, entvars_t *ent ) {
 	(*g_engfuncs.pfnMessageBegin)(msg_dest, msg_type, pOrigin, ENT(ent));
 }
 
 // Testing the three types of "entity" for nullity
 #define eoNullEntity 0
-inline BOOL FNullEnt(EOFFSET eoffset)			{ return eoffset == 0; }
-inline BOOL FNullEnt(const edict_t* pent)	{ return pent == NULL || FNullEnt(OFFSET(pent)); }
-inline BOOL FNullEnt(entvars_t* pev)				{ return pev == NULL || FNullEnt(OFFSET(pev)); }
+static inline BOOL FNullEnt(EOFFSET eoffset)			{ return eoffset == 0; }
+static inline BOOL FNullEnt(const edict_t* pent)	{ return pent == NULL || FNullEnt(OFFSET(pent)); }
+static inline BOOL FNullEnt(entvars_t* pev)				{ return pev == NULL || FNullEnt(OFFSET(pev)); }
 
 // Testing strings for nullity
 #define iStringNull 0
-inline BOOL FStringNull(int iString)			{ return iString == iStringNull; }
+static inline BOOL FStringNull(int iString)			{ return iString == iStringNull; }
 
 #define cchMapNameMost 32
 
@@ -190,11 +190,11 @@ typedef enum
 	} TOGGLE_STATE;
 
 // Misc useful
-inline BOOL FStrEq(const char*sz1, const char*sz2)
+static inline BOOL FStrEq(const char*sz1, const char*sz2)
 	{ return (strcmp(sz1, sz2) == 0); }
-inline BOOL FClassnameIs(edict_t* pent, const char* szClassname)
+static inline BOOL FClassnameIs(edict_t* pent, const char* szClassname)
 	{ return FStrEq(STRING(VARS(pent)->classname), szClassname); }
-inline BOOL FClassnameIs(entvars_t* pev, const char* szClassname)
+static inline BOOL FClassnameIs(entvars_t* pev, const char* szClassname)
 	{ return FStrEq(STRING(pev->classname), szClassname); }
 
 class CBaseEntity;
@@ -224,7 +224,7 @@ extern void			UTIL_MakeVectors		(const Vector &vecAngles);
 extern int			UTIL_MonstersInSphere( CBaseEntity **pList, int listMax, const Vector &center, float radius );
 extern int			UTIL_EntitiesInBox( CBaseEntity **pList, int listMax, const Vector &mins, const Vector &maxs, int flagMask );
 
-inline void UTIL_MakeVectorsPrivate( const Vector &vecAngles, float *p_vForward, float *p_vRight, float *p_vUp )
+static inline void UTIL_MakeVectorsPrivate( const Vector &vecAngles, float *p_vForward, float *p_vRight, float *p_vUp )
 {
 	g_engfuncs.pfnAngleVectors( vecAngles, p_vForward, p_vRight, p_vUp );
 }
@@ -289,7 +289,7 @@ extern void			UTIL_PrecacheOther( const char *szClassname );
 
 // prints a message to each client
 extern void			UTIL_ClientPrintAll( int msg_dest, const char *msg_name, const char *param1 = NULL, const char *param2 = NULL, const char *param3 = NULL, const char *param4 = NULL );
-inline void			UTIL_CenterPrintAll( const char *msg_name, const char *param1 = NULL, const char *param2 = NULL, const char *param3 = NULL, const char *param4 = NULL ) 
+static inline void			UTIL_CenterPrintAll( const char *msg_name, const char *param1 = NULL, const char *param2 = NULL, const char *param3 = NULL, const char *param4 = NULL ) 
 {
 	UTIL_ClientPrintAll( HUD_PRINTCENTER, msg_name, param1, param2, param3, param4 );
 }
@@ -491,12 +491,12 @@ void EMIT_SOUND_DYN(edict_t *entity, int channel, const char *sample, float volu
 						   int flags, int pitch);
 
 
-inline void EMIT_SOUND(edict_t *entity, int channel, const char *sample, float volume, float attenuation)
+static inline void EMIT_SOUND(edict_t *entity, int channel, const char *sample, float volume, float attenuation)
 {
 	EMIT_SOUND_DYN(entity, channel, sample, volume, attenuation, 0, PITCH_NORM);
 }
 
-inline void STOP_SOUND(edict_t *entity, int channel, const char *sample)
+static inline void STOP_SOUND(edict_t *entity, int channel, const char *sample)
 {
 	EMIT_SOUND_DYN(entity, channel, sample, 0, 0, SND_STOP, PITCH_NORM);
 }

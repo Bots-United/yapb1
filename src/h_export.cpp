@@ -73,7 +73,7 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
    GetGameDirectory(szGameDLLName);
 
    // load the actual Counter-Strike Game DLL
-#ifdef _WIN32
+#if defined (_WIN32)
    strcat(szGameDLLName, "\\dlls");
    mkdir(szGameDLLName);
    strcat(szGameDLLName, "\\mp.dll");
@@ -100,8 +100,11 @@ void WINAPI GiveFnptrsToDll( enginefuncs_t* pengfuncsFromEngine, globalvars_t *p
 
       h_Library = LoadLibrary(szGameDLLName);
    }
-#else
-   strcat(szGameDLLName, "/dlls/cs_i386.so");
+#elif defined (__linux__)
+   strcat(szGameDLLName, "/dlls/cs.so");
+   h_Library = dlopen(szGameDLLName, RTLD_NOW);
+#elif defined (__APPLE__)
+   strcat(szGameDLLName, "/dlls/cs.dylib");
    h_Library = dlopen(szGameDLLName, RTLD_NOW);
 #endif
 

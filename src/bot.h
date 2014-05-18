@@ -817,13 +817,13 @@ void UTIL_DrawArrow(edict_t *pEntity, Vector start, Vector end, int width,
 Vector VecCheckToss( entvars_t *pev, const Vector &vecSpot1, Vector vecSpot2, float flGravityAdj = 1.0 );
 Vector VecCheckThrow( entvars_t *pev, const Vector &vecSpot1, Vector vecSpot2, float flSpeed, float flGravityAdj = 1.0 );
 
-inline bool IsNullString(const char *str) {
+static inline bool IsNullString(const char *str) {
    if (str == NULL)
       return TRUE;
    return (*str == '\0');
 }
 
-inline bool ParamIsValid(const char *str) {
+static inline bool ParamIsValid(const char *str) {
    if (IsNullString(str))
       return FALSE;
    return (*str != '*' || *(str + 1) != '\0');

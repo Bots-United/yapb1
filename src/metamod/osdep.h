@@ -61,6 +61,14 @@
 	#define PLATFORM	"mswin"
 	#define PLATFORM_SPC	"win32"
 	#define PLATFORM_DLEXT	".dll"
+#elif defined (__APPLE__)
+	#define PLATFORM	"macosx"
+#  if defined(__x86_64__) || defined(__amd64__)
+	#define PLATFORM_SPC	"mac64"
+#  else
+	#define PLATFORM_SPC	"mac32"
+#  endif
+	#define PLATFORM_DLEXT	".dylib"
 #else /* unknown */
 	#error "OS unrecognized"
 #endif /* unknown */
@@ -83,7 +91,7 @@
 	#define DLLEXPORT	__declspec(dllexport)
 	// WINAPI should be provided in the windows compiler headers.
 	// It's usually defined to something like "__stdcall".
-#elif defined(linux)
+#elif defined(linux) || defined (__APPLE__)
 	#define DLLEXPORT	/* */
 	#define WINAPI		/* */
 #endif /* linux */

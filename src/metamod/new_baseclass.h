@@ -31,7 +31,7 @@
 #ifndef METAMOD_NEW_BASECLASS_H
 #define METAMOD_NEW_BASECLASS_H
 
-#include <malloc.h>
+#include <string.h>
 
 #include "comp_dep.h"
 
